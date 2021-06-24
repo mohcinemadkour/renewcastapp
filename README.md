@@ -16,6 +16,14 @@ Once you have completed the above steps, you are ready to query data from the tr
 
 The get_energy_data() function interfaces with the ENTSOE-E API, to download the necessary data about energy generation for each EU country. Before defining the function, I inserted the @st.cache decorator to use the caching mechanism of Streamlit. I did that so the ENTSOE-E API will not be called every time we need to use that data, but only when it needs to be updated. This will optimize the performance of our app, and significantly reduce the time needed to run it. Let’s move on now, and examine the functionality of forecast.py , the last of the main source code files.
 
+# SKTime
+
+SKtime is a new and a great tool for time series analysis, it extends and the scikit-learn API to time series tasks. Main features of SKTime are:
+
+- sktime comes with several forecasting algorithms (or forecasters), all of which share a common interface. The interface is fully interoperable with the scikit-learn interface, and provides dedicated interface points for forecasting in batch and rolling mode.
+- sktime comes with rich composition functionality that allows to build complex pipelines easily, and connect easily with other parts of the open source ecosystem, such as scikit-learn and individual algorithm libraries.
+- sktime is easy to extend, and comes with user friendly tools to facilitate implementing and testing your own forecasters and composition principles.
+
 # Streamlit app
 
 First of all, I imported the Streamlit library, as well as some functions I created myself. After that, I added a title and description for the app, using the associated Streamlit functions. I then proceeded to create a basic user interface, by adding widgets on the standard Streamlit sidebar. Users are able to select a country and regression algorithm, as well as modify the forecast horizon and the window length. Finally, I used the area_chart() and line_chart() functions to plot the total energy generation, as well as the forecasts of renewable energy generation (solar and wind). Let’s continue with the entsoe_client.py file.
