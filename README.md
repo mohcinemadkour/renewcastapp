@@ -28,9 +28,9 @@ The select_regressor() function simply maps the regression algorithm options of 
 #  Run the app
 To run the Streamlit app from a python script, run the following:
 
-import sys
-from streamlit import cli as stcli
+    import sys
+    from streamlit import cli as stcli
 
-if __name__ == '__main__':
-    sys.argv = ["streamlit", "run", "app.py"]
-    sys.exit(stcli.main())
+    if __name__ == '__main__':
+        sys.argv = ["streamlit", "run", "app.py"]
+        sys.exit(stcli.main())
