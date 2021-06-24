@@ -11,7 +11,7 @@ from entsoe.mappings import TIMEZONE_MAPPINGS
 def get_energy_data(country_code):
     load_dotenv()
     #token = os.environ['TOKEN']
-    token = "YOUR_API_TOKEN_HERE"
+    token = "14e4daac-3450-4c93-a1d8-c2d63aa97a2b"
     client = EntsoePandasClient(api_key=token)
     end = pd.Timestamp.now(tz=TIMEZONE_MAPPINGS[country_code])
     start = end - pd.DateOffset(months=1)
